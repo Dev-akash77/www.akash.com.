@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QR CODE GENARETOR</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Darumadrop+One&family=Foldit:wght@100&family=Kanit:wght@200&family=Lobster&family=Ubuntu:wght@500&display=swap');
+      *{
+          margin:0;
+          padding:0;
+      }  
+      html{
+          62.5%;
+      }
+      
+      body{
+         background-image:linear-gradient(red,yellow);
+         margin: 20rem;
+         background-repeat: no-repeat;
+         height:80rem;
+         }
+     .main{
+         background-color:white;
+         height: 40rem;
+         width:45rem;
+         position: relative;
+         left:-12rem;
+         border-radius: 3rem;
+         top:10rem;
+      }  
+     
+      .text input{
+          position:relative;
+          width:35rem;
+          top:2rem;
+          padding:0 2rem;
+          height:4rem;
+          left:2.7rem;
+          color: white;
+          border:.1rem solid black;
+          font-size: 2rem;
+         border-radius: 5rem;
+         background-color: rgba(0,0,0,.5)
+         
+         
+         }
+    input::placeholder{
+        position: relative;
+        left: 9rem;
+        color:blue;
+        color:white;
+    }
+    .btn button{
+        position: relative;
+        top: 7rem;
+        left: 15rem;
+        width: 15rem;
+        height:4rem;
+        border-radius: 5rem;
+        background-color: rgba(0, 0, 255, .8);
+    
+   
+        font-size: 2rem;
+        color: white;
+    }
+    #imgmain{
+        border: .2rem solid black;
+       max-width:26rem;
+        height:23rem;
+        position: relative;
+        top:3rem;
+        left: 9rem;
+        border-radius: 4rem;
+        
+        transition:max-height 3s;
+    }
+    h1{
+        font-size:3rem;
+        position: relative;
+        top:-45rem;
+        width: 40rem;
+        font-weight: bold;
+        left:-6rem;
+       color:navajowhite;
+       font-family: 'Ubuntu', sans-serif;
+        
+    }
+    h2{
+        font-size:3rem;
+        position: relative;
+        top:-60rem;
+        width: 55rem;
+        left: -13rem;
+        color:white;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    #image{
+        position: relative;
+        max-width: 25rem;
+        height: 21rem;
+        top:1rem;
+        left:2.7rem;
+    }
+    
+    @media(max-width:998px){
+        html{
+            font-size: 99%
+        }
+    }
+    
+      @media(max-width:480px){
+        html{
+            font-size: 37.2%
+        }
+        h2{
+            left:-15rem;
+            position: relative;
+        }
+    }
+      
+        
+    </style>
+</head>
+<body>
+  <div class="main">
+   <div class="text">
+     <input type="text"placeholder="Enter text or url" id="input1">  
+   </div> 
+   <div id="imgmain">
+     <img src=""id="image"> 
+   </div>
+
+   <div class="btn">
+    <button id="gen"onclick="uplode()">  
+   GENERATE
+    
+    </button>
+      
+       
+   </div>
+      
+  </div>
+  <h1>QR CODE GENERATOR</h1><br><h2>DEVOLOPED BY AKASH BISWAS</h2>
+  
+
+<script>
+   let display=document.getElementById('input1');
+   let imgmain=document.getElementById('img-main');
+   let image5=document.getElementById('image');
+   
+   function uplode(e){
+       image5.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+display.value;
+       
+   }
+
+    
+   
+    
+    
+</script>
+</body>
+</html>
